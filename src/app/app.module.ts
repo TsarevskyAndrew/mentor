@@ -17,7 +17,7 @@ import {GuestComponent} from './components/guest/guest.component';
         HeaderComponent,
         LoginComponent,
         RegisterComponent,
-        GuestComponent
+        GuestComponent,
     ],
     imports: [
         BrowserModule,

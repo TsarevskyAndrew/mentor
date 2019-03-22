@@ -11,12 +11,17 @@ const routes: Routes = [
     {path: 'register', component: RegisterComponent},
     {
         path: '',
-        loadChildren: './modules/user/user.module#UserModule',
+        loadChildren: './student/student.module#StudentModule',
         canActivate: [AuthGuard]
     },
     {
-        path: 'user',
-        loadChildren: './modules/user/user.module#UserModule',
+        path: 'student',
+        loadChildren: './student/student.module#StudentModule',
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'teacher',
+        loadChildren: './teacher/teacher.module#TeacherModule',
         canActivate: [AuthGuard]
     },
     {path: 'guest', component: GuestComponent},

@@ -7,10 +7,12 @@ import {HttpClient} from '@angular/common/http';
 export class AuthService {
 
     // private _registerUrl = 'http://localhost:3000/api/register';
-    private _registerUrl = 'https://test-mentor.herokuapp.com/add_user';
+    // private _registerUrl = 'https://test-mentor.herokuapp.com/add_user';
+    private _registerUrl = 'https://mentor-online-new.herokuapp.com/addUser';
 
     // private _loginUrl = 'http://localhost:3000/api/login';
-    private _loginUrl = 'https://test-mentor.herokuapp.com/find_user';
+    // private _loginUrl = 'https://test-mentor.herokuapp.com/find_user';
+    private _loginUrl = 'https://mentor-online-new.herokuapp.com/findUser';
 
     constructor(private http: HttpClient) {
     }
@@ -27,5 +29,9 @@ export class AuthService {
 
     loggedIn() {
         return !!localStorage.getItem('token');
+    }
+
+    token() {
+        return localStorage.getItem('token');
     }
 }

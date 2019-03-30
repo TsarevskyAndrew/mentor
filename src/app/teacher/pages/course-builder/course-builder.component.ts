@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {CourseBuilderService} from '../../../services/course-builder/course-builder.service';
 
 @Component({
     selector: 'app-course-builder',
@@ -9,7 +10,7 @@ export class CourseBuilderComponent implements OnInit {
 
     course = {};
 
-    constructor() {
+    constructor(private _builder: CourseBuilderService) {
 
     }
 
@@ -17,7 +18,13 @@ export class CourseBuilderComponent implements OnInit {
     }
 
     create() {
-     console.log(this.course);
+        this._builder.registerCourse(this.course)
+            .subscribe(
+                res => {
+                    console.log(res);
+                },
+                err => console.log(err)
+            );
 
     }
 }

@@ -2,12 +2,13 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TeacherComponent} from './pages/teacher/teacher.component';
 import {TeacherRoutingModule} from './teacher-routing.module';
-import { CreateCourseComponent } from './components/create-course/create-course.component';
-import { CourseBuilderComponent } from './pages/course-builder/course-builder.component';
+import {CreateCourseComponent} from './components/create-course/create-course.component';
+import {CourseBuilderComponent} from './pages/course-builder/course-builder.component';
 import {FormsModule} from '@angular/forms';
+import { CourseRegisterComponent } from './pages/course-register/course-register.component';
 
 @NgModule({
-    declarations: [TeacherComponent, CreateCourseComponent, CourseBuilderComponent],
+    declarations: [TeacherComponent, CreateCourseComponent, CourseBuilderComponent, CourseRegisterComponent],
     imports: [
         CommonModule,
         TeacherRoutingModule,

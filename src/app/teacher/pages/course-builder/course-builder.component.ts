@@ -8,7 +8,7 @@ import {CourseBuilderService} from '../../../services/course-builder/course-buil
 })
 export class CourseBuilderComponent implements OnInit {
 
-    course = {};
+    // course = {};
 
     constructor(private _builder: CourseBuilderService) {
 
@@ -17,14 +17,14 @@ export class CourseBuilderComponent implements OnInit {
     ngOnInit() {
     }
 
-    create() {
-        this._builder.registerCourse(this.course)
-            .subscribe(
-                res => {
-                    console.log(res);
-                },
-                err => console.log(err)
-            );
-
-    }
+    // create() {
+    //     this._builder.registerCourse(this.course)
+    //         .subscribe(
+    //             res => {
+    //                 console.log(res);
+    //             },
+    //             err => console.log(err)
+    //         );
+    //
+    // }
 }

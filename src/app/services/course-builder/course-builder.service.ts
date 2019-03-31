@@ -15,7 +15,7 @@ export class CourseBuilderService {
     }
 
     registerCourse(course) {
-        course.token = this._authService.token();
+        // course.token = this._authService.token();
         console.log('registerCourse() course_', course);
         return this._http.post<any>(this._registerCourseUrl, course);
     }

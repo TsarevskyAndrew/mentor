@@ -12,7 +12,7 @@ export class AuthService {
 
     // private _loginUrl = 'http://localhost:3000/api/login';
     // private _loginUrl = 'https://test-mentor.herokuapp.com/find_user';
-    private _loginUrl = 'https://mentor-online-new.herokuapp.com/findUser';
+    private _loginUrl = 'https://mentor-online-new.herokuapp.com/login';
 
     constructor(private http: HttpClient) {
     }

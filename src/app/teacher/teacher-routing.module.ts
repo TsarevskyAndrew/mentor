@@ -8,7 +8,7 @@ import {CourseRegisterComponent} from './pages/course-register/course-register.c
 
 const routes: Routes = [
     {path: '', component: TeacherComponent},
-    {path: 'builder', component: CourseBuilderComponent},
+    {path: 'builder/:id', component: CourseBuilderComponent},
     {path: 'register', component: CourseRegisterComponent}
 
 ];

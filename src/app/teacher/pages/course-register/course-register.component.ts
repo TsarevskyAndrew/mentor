@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {CourseBuilderService} from '../../../services/course-builder/course-builder.service';
+// import {CourseBuilderService} from '../../../services/course-builder/course-builder.service';
+import {TeacherCoursesService} from '../../../services/teacher-courses/teacher-courses.service';
 
 @Component({
     selector: 'app-course-register',
@@ -10,7 +11,7 @@ import {CourseBuilderService} from '../../../services/course-builder/course-buil
 export class CourseRegisterComponent implements OnInit {
     course = {};
 
-    constructor(private _builder: CourseBuilderService,
+    constructor(private _builder: TeacherCoursesService,
                 private _router: Router) {
     }
 

@@ -2,9 +2,9 @@ import {Course} from '../models/course';
 
 export const COURSES: Course[] = [
     {
-        courseID: '1',
+        id: '1',
         imgUrl: 'url1',
-        title: 'course1',
+        name: 'course1',
         teacher: 'teacher1',
         ratingStar: 5,
         ratingVotes: 125,
@@ -12,9 +12,9 @@ export const COURSES: Course[] = [
         priceDiscount: 0
     },
     {
-        courseID: '2',
+        id: '2',
         imgUrl: 'url2',
-        title: 'course2',
+        name: 'course2',
         teacher: 'teacher1',
         ratingStar: 4,
         ratingVotes: 150,
@@ -22,9 +22,9 @@ export const COURSES: Course[] = [
         priceDiscount: 180
     },
     {
-        courseID: '3',
+        id: '3',
         imgUrl: 'url3',
-        title: 'course3',
+        name: 'course3',
         teacher: 'teacher3',
         ratingStar: 4.5,
         ratingVotes: 151,

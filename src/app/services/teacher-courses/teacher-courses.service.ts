@@ -27,7 +27,8 @@ export class TeacherCoursesService {
     }
 
     getCourseById(ID: string) {
-        const body = {id: ID};
-        return this._http.post<any>(this._getCourseByIdUrl, body);
+        // const body = {id: ID};
+        this._getCourseByIdUrl += ('/' + ID);
+        return this._http.get<any>(this._getCourseByIdUrl);
     }
 }

@@ -9,7 +9,7 @@ import {TeacherCoursesService} from '../../../services/teacher-courses/teacher-c
     styleUrls: ['./teacher.component.scss']
 })
 export class TeacherComponent implements OnInit {
-    arrMyCourses: Course[];
+    arrMyCourses: Course[] = [];
 
     constructor(private _http: TeacherCoursesService) {
     }

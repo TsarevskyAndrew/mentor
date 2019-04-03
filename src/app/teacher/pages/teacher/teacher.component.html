@@ -9,7 +9,7 @@
     <li class="teacher-courses__list-item" *ngFor="let course of arrMyCourses">
       <a class="teacher-course-card" routerLink="builder/{{course.id}}">
         <div class="teacher-course-card__head">
-          <img src="{{course.imgUrl}}" alt="preview">
+          <img [src]="course.imgUrl" alt="preview">
         </div>
         <div class="teacher-course-card__main">
           <p>id_{{course.id}}</p>
@@ -32,6 +32,8 @@
         </div>
       </a>
     </li>
+
+    <!--<course-item *ngFor="let course of arrMyCourses" [course]="course"></course-item>-->
   </ul>
 </div>
 <ng-template #noCourses>

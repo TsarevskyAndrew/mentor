@@ -1,13 +1,18 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {getBodyNode} from '@angular/animations/browser/src/render/shared';
+import {environment} from '../../../environments/environment';
+
+const {apiUrl} = environment;
 
 @Injectable({
     providedIn: 'root'
 })
 export class TeacherCoursesService {
 
-    private _registerCourseUrl = 'https://mentor-online-new.herokuapp.com/addCourse';
+    private _registerCourseUrl = `${apiUrl}/addCourse`;
     private _findCourseUrl = 'https://mentor-online-new.herokuapp.com/findCourse';
+    private _getCourseByIdUrl = 'https://mentor-online-new.herokuapp.com/getCourseById';
 
     constructor(private _http: HttpClient) {
     }
@@ -19,5 +24,10 @@ export class TeacherCoursesService {
 
     getCourses() {
         return this._http.get<any>(this._findCourseUrl);
+    }
+
+    getCourseById(ID: string) {
+        const body = {id: ID};
+        return this._http.post<any>(this._getCourseByIdUrl, body);
     }
 }

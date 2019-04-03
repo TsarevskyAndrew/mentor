@@ -9,7 +9,7 @@ import {HeaderComponent} from './ui/header/header.component';
 import {LoginComponent} from './components/login/login.component';
 import {RegisterComponent} from './components/register/register.component';
 import {GuestComponent} from './components/guest/guest.component';
-import {TokenInterceptorService} from './services/token-interceptor.service';
+import {TokenInterceptorService} from './services/token-interceptor/token-interceptor.service';
 import {AuthService} from './services/auth/auth.service';
 import {AuthGuard} from './auth.guard';
 

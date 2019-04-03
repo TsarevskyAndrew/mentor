@@ -6,13 +6,16 @@ import {CreateCourseComponent} from './components/create-course/create-course.co
 import {CourseBuilderComponent} from './pages/course-builder/course-builder.component';
 import {FormsModule} from '@angular/forms';
 import { CourseRegisterComponent } from './pages/course-register/course-register.component';
+import {components} from './components';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
     declarations: [TeacherComponent, CreateCourseComponent, CourseBuilderComponent, CourseRegisterComponent],
     imports: [
         CommonModule,
         TeacherRoutingModule,
-        FormsModule
+        FormsModule,
+        SharedModule
     ]
 })
 export class TeacherModule {

@@ -27,7 +27,7 @@ export class CourseBuilderComponent implements OnInit {
         this._http.getCourseById(this.curID)
             .subscribe(
                 res => {
-                    this.course = res.mes[0];
+                    this.course = res.message[0];
                     console.log('RES:', res);
                     console.log('this.course:', this.course);
                 },

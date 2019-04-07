@@ -12,7 +12,8 @@ export class TeacherCoursesService {
 
     private _registerCourseUrl = `${apiUrl}/addCourse`;
     private _findCourseUrl = 'https://mentor-online-new.herokuapp.com/findCourse';
-    private _getCourseByIdUrl = 'https://mentor-online-new.herokuapp.com/getCourseById';
+    private _getCourseByIdUrl = 'https://mentor-online-new.herokuapp.com/getCourseById/';
+    private _getCourseByIdUrlCurrent: string;
 
     constructor(private _http: HttpClient) {
     }
@@ -28,7 +29,7 @@ export class TeacherCoursesService {
 
     getCourseById(ID: string) {
         // const body = {id: ID};
-        this._getCourseByIdUrl += ('/' + ID);
-        return this._http.get<any>(this._getCourseByIdUrl);
+        this._getCourseByIdUrlCurrent = (this._getCourseByIdUrl + ID);
+        return this._http.get<any>(this._getCourseByIdUrlCurrent);
     }
 }

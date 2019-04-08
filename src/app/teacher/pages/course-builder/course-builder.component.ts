@@ -37,4 +37,17 @@ export class CourseBuilderComponent implements OnInit {
             );
     }
 
+    updateCourse() {
+        console.log(this.course);
+        this._http.updateCourse(this.course)
+            .subscribe(
+                res => {
+                    console.log('RES:', res);
+                },
+                err => {
+                    console.log(err);
+                }
+            );
+    }
+
 }

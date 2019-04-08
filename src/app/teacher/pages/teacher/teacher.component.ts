@@ -3,6 +3,7 @@ import {Course} from '../../../models/course';
 // import {COURSES} from '../../../mocks/mock-courses';
 import {TeacherCoursesService} from '../../../services/teacher-courses/teacher-courses.service';
 
+
 @Component({
     selector: 'app-teacher',
     templateUrl: './teacher.component.html',

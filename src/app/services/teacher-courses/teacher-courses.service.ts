@@ -11,6 +11,7 @@ const {apiUrl} = environment;
 export class TeacherCoursesService {
 
     private _registerCourseUrl = `${apiUrl}/addCourse`;
+    private _updateCourseUrl = 'https://mentor-online-new.herokuapp.com/updateCourseById/';
     private _findCourseUrl = 'https://mentor-online-new.herokuapp.com/findCourse';
     private _getCourseByIdUrl = 'https://mentor-online-new.herokuapp.com/getCourseById/';
     private _getCourseByIdUrlCurrent: string;
@@ -32,4 +33,11 @@ export class TeacherCoursesService {
         this._getCourseByIdUrlCurrent = (this._getCourseByIdUrl + ID);
         return this._http.get<any>(this._getCourseByIdUrlCurrent);
     }
+
+    updateCourse(course) {
+        console.log('updateCourse course_', course);
+        const url = this._updateCourseUrl + course.id;
+        return this._http.post<any>(url, course);
+    }
+
 }

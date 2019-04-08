@@ -7,4 +7,5 @@ export class Course {
     ratingVotes: number;
     price: number;
     priceDiscount: number;
+    description: string;
 }

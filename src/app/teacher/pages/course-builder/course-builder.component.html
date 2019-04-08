@@ -1,5 +1,11 @@
 <main class="course-builder">
-
-    <a class="course-builder__btn-back" routerLink="/teacher"><</a>
-    <input class="course-builder__title" [(ngModel)]="course.name" name="name" type="text" required="required">
+    <div class="">
+        <a class="course-builder__btn-back" routerLink="/teacher"><</a>
+        <button (click)="updateCourse()" class="course-builder__btn-save">SAVE</button>
+    </div>
+    <p>COURSE NAME:</p>
+    <input class="course-builder__name" [(ngModel)]="course.name" name="name" type="text" required="required">
+    <!--<input class="course-builder__description" [(ngModel)]="course.description" name="name" type="text" required="required">-->
+    <p>COURSE DESCRIPTION:</p>
+    <textarea class="course-builder__description" [(ngModel)]="course.description" placeholder="PLEASE WRITE COURSE DESCRIPTION"></textarea>
 </main>

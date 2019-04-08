@@ -1,42 +1,20 @@
 <p>
-  teacher works!
+    teacher works!
 </p>
 <app-create-course></app-create-course>
 
 <div class="teacher-courses" *ngIf="arrMyCourses.length>0; else noCourses">
-  <h2 class="teacher-courses__title">ВАШИ КУРСЫ:</h2>
-  <ul class="teacher-courses__list">
-    <li class="teacher-courses__list-item" *ngFor="let course of arrMyCourses">
-      <a class="teacher-course-card" routerLink="builder/{{course.id}}">
-        <div class="teacher-course-card__head">
-          <img [src]="course.imgUrl" alt="preview">
-        </div>
-        <div class="teacher-course-card__main">
-          <p>id_{{course.id}}</p>
-          <h3 class="teacher-course-card__title">{{course.name}}</h3>
-          <p class="teacher-course-card__teacher">
-            {{course.teacher}}
-          </p>
-          <p class="teacher-course-card__ratings">
-            <span class="teacher-course-card__rating-star">{{course.ratingStar}}</span>
-            <span class="teacher-course-card__rating-votes">({{course.ratingVotes}})</span>
-
-          </p>
-          <p class="teacher-course-card__prices" *ngIf="course.priceDiscount>0">
-            <span class="teacher-course-card__priceOld">{{course.price}} $</span>
-            <span class="teacher-course-card__price">{{course.priceDiscount}} $</span>
-          </p>
-          <p class="teacher-course-card__prices" *ngIf="course.priceDiscount==0">
-            <span class="teacher-course-card__price">{{course.price}} $</span>
-          </p>
-        </div>
-      </a>
-    </li>
-    <!--<app-course-card *ngFor="let course of arrMyCourses" [course]="course"></app-course-card>-->
-  </ul>
+    <h2 class="teacher-courses__title">ВАШИ КУРСЫ:</h2>
+    <ul class="teacher-courses__list">
+        <li class="teacher-courses__list-item" *ngFor="let course of arrMyCourses">
+            <a class="teacher-courses__list-item-link" routerLink="builder/{{course.id}}">
+                <app-course-card [course]="course"></app-course-card>
+            </a>
+        </li>
+    </ul>
 </div>
 <ng-template #noCourses>
-  <h2 class="teacher-courses__title">ВЫ ЕЩЕ НЕ СОЗДАЛИ НИ ОДНОГО КУРСА</h2>
+    <h2 class="teacher-courses__title">ВЫ ЕЩЕ НЕ СОЗДАЛИ НИ ОДНОГО КУРСА</h2>
 </ng-template>
 
 

@@ -12,7 +12,6 @@ import {GuestComponent} from './components/guest/guest.component';
 import {TokenInterceptorService} from './services/token-interceptor/token-interceptor.service';
 import {AuthService} from './services/auth/auth.service';
 import {AuthGuard} from './auth.guard';
-import {SharedModule} from './shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -27,7 +26,6 @@ import {SharedModule} from './shared/shared.module';
         AppRoutingModule,
         HttpClientModule,
         FormsModule,
-        SharedModule
     ],
     providers: [AuthService, AuthGuard,
         {

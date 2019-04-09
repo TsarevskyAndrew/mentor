@@ -17,4 +17,8 @@ export class StudentService {
     getTop5() {
         return this._http.get<any>(this._top5Url);
     }
+
+    getCoursePreviewById(ID: string) {
+        return this._http.get<any>(`${apiUrl}/getCourseById/${ID}`);
+    }
 }

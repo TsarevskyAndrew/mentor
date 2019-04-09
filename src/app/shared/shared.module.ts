@@ -1,14 +1,17 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CourseCardComponent } from './course-card/course-card.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {CourseCardComponent} from './course-card/course-card.component';
+import {CoursePreviewComponent} from './course-preview/course-preview.component';
 
 @NgModule({
-  declarations: [CourseCardComponent],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    CourseCardComponent
-  ]
+    declarations: [CourseCardComponent, CoursePreviewComponent],
+    imports: [
+        CommonModule
+    ],
+    exports: [
+        CourseCardComponent,
+        CoursePreviewComponent
+    ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

@@ -1,4 +1,4 @@
-<!--<div class="course-card__content">-->
+<div class="course-card__content">
     <div class="course-card__head">
         <img [src]="course.imgUrl" alt="preview">
     </div>
@@ -21,4 +21,13 @@
             <span class="course-card__price">{{course.price}} $</span>
         </p>
     </div>
-<!--</div>-->
+
+    <div class="course-card-modal">
+        <h3 class="course-card__title">{{course.name}}</h3>
+        <p>{{course.description}}</p>
+
+        <div class="course-card-modal__foot">
+            <button (click)="onSubscribe">Subscribe</button>
+        </div>
+    </div>
+</div>

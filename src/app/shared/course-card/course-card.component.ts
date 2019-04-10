@@ -15,4 +15,8 @@ export class CourseCardComponent implements OnInit {
 
     ngOnInit() {
     }
+
+    onSubscribe() {
+        console.log('Subscribe is clicked');
+    }
 }

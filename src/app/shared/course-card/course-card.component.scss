@@ -11,6 +11,13 @@
   &:hover {
     box-shadow: 0 0 3px 3px rgba(20, 23, 28, 0.2), 0 5px 5px 0 rgba(20, 23, 28, 0.2);
   }
+
+  &:hover{
+    .course-card-modal{
+      visibility: visible;
+      transition: 700ms 500ms;
+    }
+  }
 }
 
 .course-card {
@@ -74,4 +81,22 @@
     color: #29303B;
     font-weight: 700;
   }
+}
+
+.course-card-modal{
+  visibility:hidden;
+  position: absolute;
+  transition: 300ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 140%;
+  height: 140%;
+  background: white;
+  left: 105%;
+  bottom: -20%;
+  z-index: 100;
+  box-shadow: 0 0 3px 3px rgba(20, 23, 28, 0.2), 0 5px 5px 0 rgba(20, 23, 28, 0.2);
+  padding: 5%;
+  border-radius: 5px;
 }

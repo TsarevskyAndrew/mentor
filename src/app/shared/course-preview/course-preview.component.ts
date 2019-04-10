@@ -32,4 +32,7 @@ export class CoursePreviewComponent implements OnInit {
             );
     }
 
+    onSubscribe() {
+        console.log('Subscribe is clicked');
+    }
 }

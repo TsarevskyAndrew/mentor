@@ -1,4 +1,4 @@
-<main class="course-builder">
+<div class="course-builder">
     <div class="">
         <a class="course-builder__btn-back" routerLink="/teacher"><</a>
         <button (click)="updateCourse()" class="course-builder__btn-save">SAVE</button>
@@ -8,4 +8,12 @@
     <!--<input class="course-builder__description" [(ngModel)]="course.description" name="name" type="text" required="required">-->
     <p>COURSE DESCRIPTION:</p>
     <textarea class="course-builder__description" [(ngModel)]="course.description" placeholder="PLEASE WRITE COURSE DESCRIPTION"></textarea>
-</main>
+
+    <!--<img [src]="cardImgFile" alt="card image">-->
+    <!--<input type="file" accept='image/*' (change)="onFileSelected($event)">-->
+
+    <span style="color:red;" *ngIf="message">{{message}}</span>
+    <img [src]="imgURL" height="200" *ngIf="imgURL">
+    <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+
+</div>

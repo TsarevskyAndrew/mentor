@@ -18,7 +18,7 @@ export class StudentComponent implements OnInit {
         this._studentService.getTop5()
             .subscribe(
                 res => {
-                    this.arrTopCourses = res.courses;
+                    this.arrTopCourses = res.top;
                     console.log('RES getTop5 :', res);
                     console.log('this.arrMyCourses:', this.arrTopCourses);
                 },

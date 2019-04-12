@@ -22,7 +22,7 @@ export class CoursePreviewComponent implements OnInit {
         this._http.getCoursePreviewById(this.curID)
             .subscribe(
                 res => {
-                    this.course = res.message[0];
+                    this.course = res.message;
                     console.log('RES:', res);
                     console.log('this.course:', this.course);
                 },

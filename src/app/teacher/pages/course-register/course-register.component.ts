@@ -13,18 +13,19 @@ export class CourseRegisterComponent implements OnInit {
     course = {};
     form: FormGroup;
 
-    constructor(private _builder: TeacherCoursesService,
-                private _router: Router, private builder: FormBuilder) {
-        this.form = builder.group({
-            name: ['', Validators.required]
-        })
+    constructor(private _http: TeacherCoursesService,
+                private _router: Router,
+                private formBuilder: FormBuilder) {
+        // this.form = formBuilder.group({
+        //     name: ['', Validators.required]
+        // });
     }
 
     ngOnInit() {
     }
 
     create() {
-        this._builder.registerCourse(this.course)
+        this._http.registerCourse(this.course)
             .subscribe(
                 res => {
                     console.log(res);
@@ -32,7 +33,6 @@ export class CourseRegisterComponent implements OnInit {
                 },
                 err => {
                     console.log(err);
-                    this._router.navigate(['teacher/builder']);
                 }
             );
 

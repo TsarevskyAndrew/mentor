@@ -19,6 +19,6 @@ export class StudentService {
     }
 
     getCoursePreviewById(ID: string) {
-        return this._http.get<any>(`${apiUrl}/getCourseById/${ID}`);
+        return this._http.get<any>(`${apiUrl}/courseById/${ID}`);
     }
 }

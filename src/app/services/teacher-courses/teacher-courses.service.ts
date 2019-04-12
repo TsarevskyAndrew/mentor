@@ -11,9 +11,9 @@ const {apiUrl} = environment;
 export class TeacherCoursesService {
 
     private _registerCourseUrl = `${apiUrl}/addCourse`;
-    private _updateCourseUrl = 'https://mentor-online-new.herokuapp.com/updateCourseById/';
+    private _updateCourseUrl = 'https://mentor-online-new.herokuapp.com/updateCourseId/';
     private _findCourseUrl = 'https://mentor-online-new.herokuapp.com/findCourse';
-    private _getCourseByIdUrl = 'https://mentor-online-new.herokuapp.com/getCourseById/';
+    private _getCourseByIdUrl = 'https://mentor-online-new.herokuapp.com/courseById/';
     private _getCourseByIdUrlCurrent: string;
 
     constructor(private _http: HttpClient) {

@@ -33,6 +33,16 @@ export class CoursePreviewComponent implements OnInit {
     }
 
     onSubscribe() {
-        console.log('Subscribe is clicked');
+        console.log('SUBSCRIBE BTN PRESSED');
+        this._http.subscribeOnCourse(this.curID)
+            .subscribe(
+                res => {
+                    this.course = res.message;
+                    console.log('RES:', res);
+                },
+                err => {
+                    console.log(err);
+                }
+            );
     }
 }

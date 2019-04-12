@@ -8,17 +8,24 @@ const {apiUrl} = environment;
     providedIn: 'root'
 })
 export class StudentService {
-    private _top5Url = `${apiUrl}/top5`;
-
     constructor(private _http: HttpClient) {
 
     }
 
+    getSubscribedCourses() {
+        return this._http.get<any>(`${apiUrl}/myTeachers`);
+    }
+
     getTop5() {
-        return this._http.get<any>(this._top5Url);
+        return this._http.get<any>(`${apiUrl}/top5`);
     }
 
     getCoursePreviewById(ID: string) {
         return this._http.get<any>(`${apiUrl}/courseById/${ID}`);
     }
+
+    subscribeOnCourse(ID: string) {
+        return this._http.post<any>(`${apiUrl}/addSubscription/${ID}`, '');
+    }
+
 }

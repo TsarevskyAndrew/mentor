@@ -8,6 +8,7 @@ import {FormsModule} from '@angular/forms';
 import { CourseRegisterComponent } from './pages/course-register/course-register.component';
 import {components} from './components';
 import {SharedModule} from '../shared/shared.module';
+import {MatTabsModule} from '@angular/material';
 
 @NgModule({
     declarations: [TeacherComponent, CreateCourseComponent, CourseBuilderComponent, CourseRegisterComponent],
@@ -15,7 +16,8 @@ import {SharedModule} from '../shared/shared.module';
         CommonModule,
         TeacherRoutingModule,
         FormsModule,
-        SharedModule
+        SharedModule,
+        MatTabsModule
     ]
 })
 export class TeacherModule {

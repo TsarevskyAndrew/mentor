@@ -12,6 +12,8 @@ import {GuestComponent} from './components/guest/guest.component';
 import {TokenInterceptorService} from './services/token-interceptor/token-interceptor.service';
 import {AuthService} from './services/auth/auth.service';
 import {AuthGuard} from './auth.guard';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material';
 
 @NgModule({
     declarations: [
@@ -26,7 +28,9 @@ import {AuthGuard} from './auth.guard';
         AppRoutingModule,
         HttpClientModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatTabsModule
     ],
     providers: [AuthService, AuthGuard,
         {

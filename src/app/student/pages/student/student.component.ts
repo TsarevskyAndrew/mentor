@@ -8,19 +8,31 @@ import {StudentService} from '../../../services/student/student.service';
     styleUrls: ['./student.component.scss']
 })
 export class StudentComponent implements OnInit {
-    arrMyCourses: Course[] = [];
+    arrSubscribedCourses: Course[] = [];
     arrTopCourses: Course[] = [];
 
     constructor(private _studentService: StudentService) {
     }
 
     ngOnInit() {
+        this._studentService.getSubscribedCourses()
+            .subscribe(
+                res => {
+                    this.arrSubscribedCourses = res.top;
+                    console.log('RES getSubscribedCourses :', res);
+                    console.log('this.arrSubscribedCourses:', this.arrSubscribedCourses);
+                },
+                err => {
+                    console.log(err);
+                }
+            );
+
         this._studentService.getTop5()
             .subscribe(
                 res => {
                     this.arrTopCourses = res.top;
                     console.log('RES getTop5 :', res);
-                    console.log('this.arrMyCourses:', this.arrTopCourses);
+                    console.log('this.arrTopCourses:', this.arrTopCourses);
                 },
                 err => {
                     console.log(err);

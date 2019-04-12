@@ -29,7 +29,7 @@ export class CourseRegisterComponent implements OnInit {
             .subscribe(
                 res => {
                     console.log(res);
-                    this._router.navigate(['teacher/builder']);
+                    this._router.navigate([`teacher/builder/${res.curs_add.id}`]);
                 },
                 err => {
                     console.log(err);

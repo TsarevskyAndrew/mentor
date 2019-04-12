@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-// import {CourseBuilderService} from '../../../services/course-builder/course-builder.service';
-
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Course} from '../../../models/course';
 import {TeacherCoursesService} from '../../../services/teacher-courses/teacher-courses.service';

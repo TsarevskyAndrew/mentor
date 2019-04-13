@@ -1,7 +1,22 @@
-.course-builder{
+.course{
   max-width: 1200px;
+  padding: 0 30px;
   margin: 0 auto;
-  padding: 20px 30px;
+  color: gray;
+  font-size: 16px;
+
+  &__title{
+    text-align: center;
+    font-size: 30px;
+  }
+  &__teacher{
+    text-align: right;
+  }
+  &__teacher-name{
+    font-size: 24px;
+    color: black;
+    font-style: italic;
+  }
 
   &__btn-back{
     display: inline-block;
@@ -13,29 +28,9 @@
     align-items: center;
     justify-content: space-evenly;
     box-shadow: 0 0 3px lightgray;
+    cursor: pointer;
     &:hover{
       background: lightgray;
     }
   }
-
-  &__title{
-    font-size: 30px;
-    text-align: center;
-  }
-
-  &__name{
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
-    border: 1px solid grey;
-  }
-
-  &__description{
-    width: 100%;
-    min-height: 200px;
-    font-size: 30px;
-    padding: 10px;
-    border: 1px solid grey;
-  }
 }
-

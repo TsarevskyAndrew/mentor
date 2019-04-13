@@ -1,0 +1,27 @@
+<div class="course-builder">
+  <h2 class="course-builder__title">CREATE NEW COURSE</h2>
+  <form class="course-builder__form">
+  <!--<form [formGroup]="form" class="course-builder__form">-->
+    <p>название курса:</p>
+    <input [(ngModel)]="course.name" name="name" type="text" required="required">
+
+    <p>тип курса:</p>
+    <input [(ngModel)]="course.type" name="type" list="type" required="required">
+    <datalist id="type">
+      <option value="Курс">
+      <option value="Тест">
+    </datalist>
+
+    <p>категория:</p>
+    <input [(ngModel)]="course.category" name="category"   list="category" required="required">
+    <datalist id="category">
+      <option value="Разработка">
+      <option value="Бизнес">
+      <option value="ИТ и ПО">
+      <option value="Личностный рост">
+      <option value="Дизайн">
+    </datalist>
+
+    <button (click)="create()" class="registration-btn">CREATE</button>
+  </form>
+</div>

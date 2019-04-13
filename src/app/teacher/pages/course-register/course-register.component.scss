@@ -1,0 +1,16 @@
+.course-builder{
+  max-width: 600px;
+  margin: 0 auto;
+  &__form{
+    display: flex;
+    flex-direction: column;
+    input{
+      min-height: 50px;
+      width: 100%;
+      border: 1px solid grey;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+

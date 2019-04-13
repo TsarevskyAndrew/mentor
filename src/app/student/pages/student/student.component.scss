@@ -1,6 +1,14 @@
-.teacher-courses {
-  text-align: center;
-  padding-top: 50px;
+.student{
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0 30px;
+}
+
+.top-courses {
+  &__list {
+    text-align: center;
+    padding-top: 50px;
+  }
 
   &__list {
     display: flex;
@@ -10,14 +18,13 @@
     list-style: none;
     padding: 0 0 100px;
   }
-  &__list-item{
+
+  &__list-item {
     flex-basis: 260px;
     padding: 15px;
   }
-  &__list-item-link{
+
+  &__list-item-link {
 
   }
 }
-
-
-

@@ -1,26 +1,30 @@
 <div class="course-builder">
-    <h2 class="course-builder__title">CREATE NEW COURSE</h2>
-    <form class="course-builder__form">
-      <p>название курса:</p>
-      <input [(ngModel)]="course.name" name="name" type="text" required="required">
+    <div class="">
+        <a class="course-builder__btn-back" routerLink="/teacher"><</a>
+        <button (click)="updateCourse()" class="course-builder__btn-save">SAVE</button>
+    </div>
+    <h2 class="course-builder__title">{{course.name}}</h2>
 
-      <p>тип курса:</p>
-      <input [(ngModel)]="course.type" name="type" list="type" required="required">
-      <datalist id="type">
-        <option value="Курс">
-        <option value="Тест">
-      </datalist>
+    <mat-tab-group>
+        <mat-tab label="REPORTS">
 
-      <p>категория:</p>
-      <input [(ngModel)]="course.category" name="category"   list="category" required="required">
-      <datalist id="category">
-        <option value="Разработка">
-        <option value="Бизнес">
-        <option value="ИТ и ПО">
-        <option value="Личностный рост">
-        <option value="Дизайн">
-      </datalist>
+        </mat-tab>
+        <mat-tab label="CONTENT"> Content OF THE COURSE</mat-tab>
+        <mat-tab label="SETTINGS">
+            <p>COURSE NAME:</p>
+            <input class="course-builder__name" [(ngModel)]="course.name" name="name" type="text" required="required">
+            <!--<input class="course-builder__description" [(ngModel)]="course.description" name="name" type="text" required="required">-->
+            <p>COURSE DESCRIPTION:</p>
+            <textarea class="course-builder__description" [(ngModel)]="course.description" placeholder="PLEASE WRITE COURSE DESCRIPTION"></textarea>
 
-      <button (click)="create()" class="registration-btn">CREATE</button>
-    </form>
+            <!--<img [src]="cardImgFile" alt="card image">-->
+            <!--<input type="file" accept='image/*' (change)="onFileSelected($event)">-->
+
+            <p>CARD PREVIEW IMAGE:</p>
+            <span style="color:red;" *ngIf="message">{{message}}</span>
+            <img [src]="imgURL" height="200" *ngIf="imgURL">
+            <input #file type="file" accept='image/*' (change)="preview(file.files)"/>
+        </mat-tab>
+    </mat-tab-group>
+
 </div>
